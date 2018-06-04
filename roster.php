@@ -23,22 +23,67 @@
     $rosterArray = array($player1, $player2, $player3, $player4, $player5, $player6, $player7, $player8, $player9, $player10, $player11, $player12);
 
 
-
+    //echo $rosterArray[0][0];
+    //echo "<br>";
 ?>
 
 
 
 <?php
-    for($i==0; $i<count($rosterArray);$i++){
-      if($rosterArray[$i][0] == 1){
-        echo $rosterArray[$i][1];
-        echo "<br>";
+
+    for($i=0; $i<count($rosterArray); $i++){
+      //echo $i;
+      // echo "<br>";
+      if(($rosterArray[$i][0]) == 1){
+        //echo $rosterArray[$i][1];
+        //echo "<br>";
+        array_push($rosterPlaying, $rosterArray[$i][1]);
+
 
       }
 
     }
 
 ?>
+
+<?php
+
+  // Shuffle the array of players that are playing to get a random order
+  shuffle($rosterPlaying);
+
+  //array_shift($rosterPlaying);
+
+  for($j=0; $j<count($rosterPlaying);$j++){
+    echo "J is:";
+    echo $j;
+    echo "<br>";
+    echo $rosterPlaying[$j];
+    echo "<br>";
+  }
+/*
+    $countArray = count($rosterPlaying);
+    echo $countArray;
+    echo "<br>";
+
+    echo $rosterPlaying[0];
+    echo "<br>";
+    echo $rosterPlaying[1];
+    echo "<br>";
+    echo $rosterPlaying[2];
+    echo "<br>";
+    echo $rosterPlaying[3];
+    echo "<br>";
+    echo $rosterPlaying[4];
+    echo "<br>";
+    echo $rosterPlaying[5];
+    echo "<br>";
+
+    echo $player1[1];
+    echo $player1[0];
+
+    */
+
+ ?>
 
 </body>
 </html>

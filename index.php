@@ -89,8 +89,8 @@
 <form action="roster.php" method="post">
 
   <label class="container"><input type="checkbox" checkbox="checked" name="player1" <?php if (isset($player1) && $player1=="player1") ?> value=1>Andy<br>
-  <span class="checkmark"></span>
-  </label>
+    <span class="checkmark"></span>
+    </label>
   <label class="container"><input type="checkbox" checkbox="checked" name="player2" <?php if (isset($player2) && $player2=="player2") ?> value=1>Bart<br>
   <span class="checkmark"></span>
   </label>
